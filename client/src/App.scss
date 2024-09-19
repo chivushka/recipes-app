@@ -1,0 +1,300 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 100px; /* Встановлює відступ для скролінгу */
+}
+
+
+.margin_inline {
+  margin: 0px min(8rem, 8vw);
+
+  @media (max-width: 600px) {
+    margin: 0px 10px;
+  }
+}
+
+.padding_inline {
+  padding: 0px min(8rem, 8vw);
+
+  @media (max-width: 600px) {
+    padding: 0px 10px;
+  }
+}
+
+.profile_layout_container {
+  display: flex;
+  padding: min(6rem, 6vh) min(8rem, 8vw);
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
+
+  .profile_page {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+    justify-content: flex-start;
+    background: #f1f1f186;
+    padding-top: min(3rem, 3vh);
+    padding-bottom: min(3rem, 3vh);
+    min-height: 50vh;
+  }
+}
+
+.admin_layout_container {
+  display: flex;
+  flex-direction: column;
+  .admin_page {
+    display: flex;
+    flex-direction: column;
+    gap: min(3rem, 3vh);
+    align-items: center;
+    padding: min(4rem, 4vh) min(2rem, 2vh);
+
+    .header {
+      color: #106b4a;
+    }
+
+    .options{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: min(1rem, 1vh);
+    }
+
+    .adm_button {
+      width: 25%;
+      padding: 10px;
+      border: 2px solid #106b4a;
+      border-radius: 5px;
+      background-color: #106b4a;
+      color: #ffffff;
+      font-size: 16px;
+      cursor: pointer;
+      align-self: center;
+      width: 50%;
+
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+
+      &:hover {
+        background-color: #ffffff;
+        color: #106b4a;
+      }
+    }
+
+    .button1 {
+      width: 20%;
+      border-radius: 10px;
+    }
+
+    .section {
+      width: 100%;
+
+      table {
+        display: inline-table;
+        width: 100%;
+        padding: 0 min(3rem, 3vw);
+        border-collapse: collapse;
+
+        tr {
+          td {
+            font-size: 15px;
+            padding: 1rem;
+            border: 1px solid #f3f3f3;
+            .go{
+              display: flex;
+              align-items: center;
+            }
+          }
+
+          th {
+            font-size: 15px;
+            padding: 1rem;
+            border: 1px solid #f3f3f3;
+            background: #106b4a2a;
+            font-weight: 500;
+          }
+        }
+
+        .icon {
+          font-size: 22px;
+          color: gray;
+          margin-left: 10px;
+
+          &:hover {
+            color: #106b4a;
+            cursor: pointer;
+          }
+        }
+
+        .red {
+          &:hover {
+            color: #e70000;
+            cursor: pointer;
+          }
+        }
+
+        .blue {
+          &:hover {
+            color: #0d66da;
+            cursor: pointer;
+          }
+        }
+
+        .file_review {
+          width: 150px;
+          height: 100px;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    form {
+      width: 100%;
+      max-width: 700px;
+      display: flex;
+      flex-direction: column;
+      gap: min(2rem, 2vh);
+      button {
+        width: 25%;
+        padding: 10px;
+        border: 2px solid #106b4a;
+        border-radius: 5px;
+        background-color: #106b4a;
+        color: #ffffff;
+        font-size: 16px;
+        cursor: pointer;
+        align-self: center;
+        width: 50%;
+
+        @media (max-width: 600px) {
+          width: 100%;
+        }
+
+        &:hover {
+          background-color: #ffffff;
+          color: #106b4a;
+        }
+      }
+      .file {
+        width: 600px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  span,
+  div {
+    user-select: none;
+  }
+}
+
+.header1 {
+  font-size: 30px;
+
+  @media (max-width: 1200px) {
+    font-size: 28px;
+  }
+  @media (max-width: 600px) {
+    font-size: 26px;
+  }
+}
+
+.header2 {
+  font-size: 28px;
+
+  @media (max-width: 1200px) {
+    font-size: 26px;
+  }
+  @media (max-width: 600px) {
+    font-size: 24px;
+  }
+}
+
+.header3 {
+  font-size: 24px;
+
+  @media (max-width: 1200px) {
+    font-size: 22px;
+  }
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
+}
+
+.header4 {
+  font-size: 20px;
+
+  @media (max-width: 1200px) {
+    font-size: 18px;
+  }
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
+}
+
+.headerrec1 {
+  font-size: 28px;
+
+  @media (max-width: 1200px) {
+    font-size: 24px;
+  }
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
+}
+
+.headerrec2 {
+  font-size: 24px;
+
+  @media (max-width: 1200px) {
+    font-size: 22px;
+  }
+  @media (max-width: 600px) {
+    font-size: 18px;
+  }
+}
+
+.green {
+  color: #106b4a;
+}
+
+.red {
+  color: #f55e5e;
+}
+
+.pagination_container {
+  padding: 0 min(8rem, 8vw);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+
+  .button {
+    border: none;
+    border-radius: 10px;
+    min-width: 110px;
+    padding: 15px 10px;
+    background: #106b4a;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+input,
+select {
+  outline: none;
+}

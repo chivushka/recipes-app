@@ -1,0 +1,91 @@
+.register_page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: min(6rem, 6vh) min(6rem, 6vh);
+    min-height: 100vh;
+    @media(max-width: 600px){
+        flex-direction: column;
+        padding: min(6rem, 6vh) 10px;
+        min-height: 0vh;
+    }
+
+    .register_card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 20px;
+        overflow: hidden;
+        min-height: 500px;
+
+        @media(max-width: 600px){
+            flex-direction: column;
+        }
+
+        .header {
+            font-size: 24px;
+        }
+
+        button {
+            width: 50%;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: #106B4A;
+            color: #ffffff;
+            font-size: 14px;
+            cursor: pointer;
+            user-select: none;
+
+            &:hover {
+                color: #106B4A;
+                background-color: #ffffff;
+            }
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            background: url('https://images.pexels.com/photos/842545/pexels-photo-842545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center;
+            background-size: cover;
+            .content {
+                background-color: #ffffffa4;
+                padding: min(3rem, 3vh);
+                display: flex;
+                flex-direction: column;
+                gap: min(1rem, 1vh);
+                user-select: none;
+
+
+            }
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: min(5rem, 5vh) min(3rem, 3vh);
+            gap: min(3rem, 3vh);
+            background-color: #F3F3F3;
+            
+            @media(max-width: 600px){
+                // width: 100%;
+            }
+            
+
+            form {
+                display: flex;
+                flex-direction: column;
+
+                gap: min(2rem, 2vh);
+
+            }
+        }
+    }
+
+
+
+
+}

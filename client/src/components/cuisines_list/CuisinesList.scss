@@ -1,0 +1,19 @@
+.cuisines_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    font-size: 14px;
+    width: 100%;
+    margin-top: min(2rem, 2vh);
+
+    @media (max-width:1200px) {
+        justify-content: center;
+    }
+
+    @media (max-width:600px) {
+        flex-direction: column;
+    }
+}

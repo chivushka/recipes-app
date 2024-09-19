@@ -1,0 +1,28 @@
+.sort_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 min(8rem, 8vw);
+
+    @media (max-width:600px) {
+        padding: 0px 10px;
+    }
+
+    *{
+        font-size: 15px;
+    }
+
+    select {
+        display: flex;
+        padding: min(1rem, 1vh);
+        border-radius: 20px;
+        border: 1px solid black;
+        min-width: 115px;
+        overflow-y: auto;
+        cursor: pointer;
+    }
+
+    option {
+        overflow-y: scroll;
+    }
+}

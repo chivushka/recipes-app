@@ -1,0 +1,94 @@
+.formDefaultInput {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: min(0.5rem, 0.5vh);
+  height: fit-content;
+
+  .inside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: min(1rem,1vh);
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: min(1rem, 1vh);
+
+      .input_container {
+        width: 100%;
+        input {
+          padding: 20px 10px;
+          border: 2px solid lightgray;
+          border-radius: 10px;
+          width: 100%;
+
+          &:focus {
+            outline: none !important;
+            border: 2px solid #106b4a;
+          }
+        }
+      }
+
+      button {
+        display: flex;
+        align-self: flex-start;
+        justify-content: center;
+        text-decoration: none;
+        padding: 5px;
+        background: #106b4a;
+        border: 2px solid #106b4a;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        user-select: none;
+
+        &:hover {
+          background: white;
+          color: #106b4a;
+        }
+
+        .icon {
+          &:hover {
+            color: #106b4a;
+          }
+        }
+      }
+    }
+
+    img {
+      width: 200px;
+      height: 120px;
+      object-fit: cover;
+    }
+    .file {
+      width: 200px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      color: gray;
+    }
+  }
+
+  .error {
+    font-size: 12px;
+    padding: 3px;
+    color: #e70000;
+    display: none;
+  }
+
+  input:invalid[focused="true"] {
+    border: 2px solid #ffe2e2;
+
+    ~ .error {
+      display: flex;
+    }
+  }
+}

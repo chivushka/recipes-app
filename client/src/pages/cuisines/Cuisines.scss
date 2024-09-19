@@ -1,0 +1,54 @@
+.cuisines_page {
+    padding: min(6rem, 6vh) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: min(6rem, 6vh);
+
+
+    @media (max-width:1200px) {
+        padding-top: min(4rem, 4vh);
+        gap: min(4rem, 4vh);
+    }
+
+
+    .page_header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: min(0.5rem, 0.5vh);
+
+        user-select: none;
+
+        .line {
+            width: 370px;
+            height: 3px;
+            border-radius: 5px;
+            background-color: #106B4A;
+
+            @media (max-width:1200px) {
+                width: 300px;
+            }
+
+            @media (max-width:600px) {
+                width: 200px;
+            }
+        }
+    }
+
+    .section {
+        width: 100%;
+        user-select: none;
+        padding: 0 min(8rem, 8vw);
+
+        @media (max-width:600px) {
+            padding: 0px 10px;
+        }
+
+    }
+
+    .section_sort{
+        width: 100%;
+    }
+
+}

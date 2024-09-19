@@ -1,0 +1,56 @@
+.formSelect {
+    width: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: min(0.5rem, 0.5vh);
+
+    select {
+        cursor: pointer;
+        padding: 20px 10px;
+        border: none;
+        border-radius: 10px;
+        border: 2px solid lightgray;
+
+        appearance: none;
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAXZJREFUSEvtUz1LA0EQfcNhigha+BMkhSyzKS1sBBsLC/UXqEVAGxvtbK00hY0fjeIfEBErexEh3dyS1tpWGwm3qxvu4JT7jMTKq/Zm5s2befuWMOaPxtwf/wSlCv+tRCJyCGAXwDkz75WOlyoIw7Brre0Q0QkzHySpbxuIyDuAyTi5z8zHVUi+cH6YI1/rnHvTWk/lEZwC2I6TEYBVZr4vIhGRFQC3AIK47oyZdzIJer3eRKPReCCixWQaAAtaa8kiEZE5AE8Apn3eWvvYbDaXWq3WRyaBD/b7/ZnBYPBMRLP+n4heoiiab7fbr2mSqnWZLiqbrM6muTY1xixba73+Q22dc9da6w1/DsPwwjnXieM2CII1pdRdloyF7yDtjhjs3eIxQ8ckMWbu5hmh9KGJyCWAzZSz/DFxzBUzbxW5rJTgp95JsyzH1JYoAVR1zMgEHmiMUc65m9i660opUyRN7juoAqpTU3oHdZr9SqJRif43KFXuE0RloRmMes4jAAAAAElFTkSuQmCC");
+        background-repeat: no-repeat;
+        background-position: right 0.7rem top 50%;
+        background-size: 1rem auto;
+
+        &:focus {
+            border: none;
+            border: 2px solid #106B4A;
+            outline: 0;
+        }
+
+        option {
+            margin-top: 10px;
+            border: 1px solid #106B4A;
+        }
+
+    }
+
+
+
+    label {
+        font-weight: 500;
+        margin-bottom: min(1rem,1vh);
+    }
+
+    span {
+        font-size: 12px;
+        padding: 3px;
+        color: #e70000;
+        display: none;
+    }
+
+
+    input:invalid[focused="true"] {
+        border: 2px solid #FFE2E2;
+
+        ~span {
+            display: block;
+        }
+    }
+}

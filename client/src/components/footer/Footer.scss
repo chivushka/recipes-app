@@ -1,0 +1,66 @@
+.footer_container {
+    background-color: #f1f1f146;
+    border-top: 1px solid #E4E3E3;
+    margin-top: 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: min(4rem, 4vh) min(8rem, 8vw);
+    gap: min(4rem, 4vh);
+    user-select: none;
+
+    @media (max-width:800px) {
+        padding: min(2rem, 2vh) 10px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: min(2rem, 2vh);
+    }
+
+    .appname {
+        font-size: 3rem;
+        color: #106B4A;
+
+        @media (max-width:600px) {
+            font-size: 2rem;
+        }
+    }
+
+    .right_menu {
+        display: flex;
+        flex-direction: row;
+        gap: min(4rem, 4vh);
+
+        @media (max-width:1200px) {
+            gap: min(3rem, 3vh);
+            font-size: 15px;
+        }
+
+        @media (max-width:600px) {
+            gap: min(2rem, 2vh);
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .undermenu {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            .elem{
+                &:hover{
+                    color: #0B7E55;
+                    cursor: pointer;
+                }
+            }
+        }
+
+
+
+    }
+
+
+}

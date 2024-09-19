@@ -1,0 +1,41 @@
+.formInput{
+    width: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: min(0.5rem, 0.5vh);
+    
+
+    input{
+        padding: 20px 10px;
+        border: 2px solid lightgray;
+        border-radius: 10px;
+
+        &:focus {
+            outline: none !important;
+            border: 2px solid #106B4A;
+        }
+    }
+    
+    
+    label{
+        font-weight: 500;
+        margin-bottom: min(1rem,1vh);
+    }
+    
+    span{
+        font-size: 12px;
+        padding: 3px;
+        color: #e70000;
+        display: none;
+        max-width: 430px;
+    }
+    
+    
+    input:invalid[focused="true"] {
+        border: 2px solid #FFE2E2;
+        ~ span {
+            display: flex;
+        }
+    }
+}

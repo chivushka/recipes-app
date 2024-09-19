@@ -1,0 +1,187 @@
+.navbar_container {
+  background-color: #fefefe;
+  border-bottom: 1px solid #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    gap: min(1rem, 1vh);
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem min(10rem, 10vw);
+    width: 100%;
+
+    @media (max-width: 600px) {
+      padding: 1rem 10px;
+    }
+
+    @media (min-width: 650px) {
+      .menu_burger_icon {
+        display: none;
+      }
+    }
+
+    .left {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: min(3rem, 3vw);
+
+      .appname {
+        span {
+          font-size: 1.5em;
+          color: #106b4a;
+        }
+      }
+
+      .menu {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        min-height: 20px;
+
+        @media (max-width: 650px) {
+          display: none;
+        }
+
+        .menu__elem {
+          cursor: pointer;
+
+          &:hover {
+            color: #0b7e55;
+          }
+        }
+      }
+    }
+
+    .right_side {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: min(1rem, 1vw);
+
+      .item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.2rem;
+
+        &:hover {
+          cursor: pointer;
+          color: #0b7e55;
+        }
+      }
+
+      .item_signin {
+        position: relative;
+        align-items: center;
+        gap: 0.2rem;
+
+        @media (max-width: 600px) {
+          position: unset;
+        }
+
+        .profile_list {
+          position: absolute;
+          display: none;
+          min-width: 150px;
+          width: auto;
+          background-color: #fefefe;
+          border: 1px solid #106b4a;
+          border-radius: 0px 0px 10px 10px;
+          padding-bottom: 10px;
+
+          .profile_list_elem {
+            width: 100%;
+            padding: min(1rem, 1vh);
+            font-size: 15px;
+            cursor: pointer;
+
+            &:hover {
+              background-color: #f3f3f3;
+              color: #0b7e55;
+            }
+          }
+
+          .hover_red {
+            &:hover {
+              color: #e70000;
+            }
+          }
+        }
+
+        @media (max-width: 1200px) {
+          .text {
+            display: none;
+          }
+        }
+
+        &:hover {
+          .profile_list {
+            display: block;
+
+            @media (max-width: 1200px) {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .icon {
+        align-self: center;
+        width: 1.5rem;
+        height: 1.5rem;
+
+        &:hover {
+          cursor: pointer;
+          color: #0b7e55;
+        }
+      }
+
+      .signin_hide{
+        @media (max-width: 600px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .menu_list {
+    position: absolute;
+    margin-top: 20px;
+    left: 0;
+    min-width: 100vw;
+    background-color: #fefefe;
+    border: 1px solid lightgray;
+    border-radius: 0px 0px 10px 10px;
+    padding-bottom: 10px;
+    z-index: 999;
+
+    .profile_list_elem {
+      width: 100%;
+      padding: min(1.5rem, 1.5vh);
+      font-size: 16px;
+      text-align: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f3f3f3;
+        color: #0b7e55;
+      }
+    }
+
+    .hover_red {
+      color: #e70000;
+    }
+  }
+}

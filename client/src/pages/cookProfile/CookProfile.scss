@@ -1,0 +1,116 @@
+.cookprofile_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: min(6rem, 6vh);
+  min-height: 70vh;
+
+  .cover {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    filter: brightness(50%);
+  }
+
+  .profile_container {
+    display: flex;
+    justify-content: center;
+    max-width: 700px;
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 20px;
+    padding: 0 min(3rem, 3vh);
+    margin-top: min(4rem, 4vh);;
+
+    .about_cook {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: min(3rem, 3vh) 0;
+
+      .img_wrapper {
+        width: auto;
+        margin-bottom: -100px;
+        transform: translateY(-60%);
+        // position: relative;
+        // top: -50%;
+
+        img {
+          aspect-ratio: 10/10;
+          max-height: 200px;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: min(0.3rem, 0.3vh);
+
+        .level {
+          display: flex;
+          align-items: center;
+          color: #106b4a;
+        }
+      }
+    }
+  }
+
+  .recipes_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: min(3rem, 3vh);
+    border-radius: 20px;
+    margin-top: min(4rem, 4vh);
+    background: #f3f3f3;
+    gap: min(3rem, 3vh);
+
+    .page_header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: min(0.5rem, 0.5vh);
+
+      user-select: none;
+
+      .line {
+        width: 370px;
+        height: 3px;
+        border-radius: 5px;
+        background-color: #106b4a;
+
+        @media (max-width: 1200px) {
+          width: 300px;
+        }
+
+        @media (max-width: 600px) {
+          width: 200px;
+        }
+      }
+    }
+
+    .viewall {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background: #106b4a;
+      border: none;
+      border-radius: 5px;
+      padding: min(1.5rem, 1.5vh) min(1.5rem, 1.5vw);
+      gap: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background: #106b4a85;
+      }
+    }
+  }
+}

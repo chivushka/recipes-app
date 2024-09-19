@@ -1,0 +1,10 @@
+.reviews {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &:last-child{
+    border-bottom: 2px solid #E4E3E3;
+  }
+
+}

@@ -1,0 +1,111 @@
+.white {
+  background-color: white;
+}
+.regular {
+  background-color: #f3f3f3;
+}
+.recipe_card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  user-select: none;
+  flex-grow: 1;
+  margin: 10px;
+  min-width: 300px;
+  flex: 1;
+
+  max-width: calc(20% - 20px);
+  flex-basis: calc(20% - 20px);
+
+  @media (max-width: 1300px) {
+    max-width: calc(50% - 20px);
+    flex-grow: 1;
+    flex-basis: calc(50% - 20px);
+  }
+  @media (max-width: 650px) {
+    max-width: calc(100% - 20px);
+    flex-grow: 1;
+    flex-basis: calc(100% - 20px);
+  }
+
+  &:hover {
+    .recipe_name {
+      color: #0b7e55;
+    }
+  }
+
+  .img_wrapper {
+    width: 100%;
+
+    img {
+      aspect-ratio: 16/9;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px 10px;
+    gap: 0.5rem;
+    max-width: 300px;
+
+    .stars {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.5rem;
+
+      .stars__nofill {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .stars__filled {
+          display: flex;
+          flex-direction: row;
+          position: absolute;
+          overflow: hidden;
+          left: 0;
+          top: 0;
+        }
+      }
+
+      .rating {
+        font-size: 15px;
+        display: flex;
+        align-self: center;
+      }
+
+      .status {
+        font-size: 15px;
+        border-radius: 5px;
+        color: white;
+        padding: 2px 5px;
+      }
+
+      .icon {
+        &:hover {
+          cursor: pointer;
+          color: #0b7e55;
+        }
+      }
+    }
+
+    span {
+      display: inline-block;
+      max-width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+    }
+  }
+}

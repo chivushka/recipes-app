@@ -1,0 +1,275 @@
+.recipe_profile_page {
+    padding: min(6rem, 6vh) 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+
+    @media (max-width:1200px) {
+        padding-top: min(4rem, 4vh);
+    }
+
+    @media (max-width:600px) {
+        span {
+            font-size: 14px;
+        }
+    }
+
+    .lh {
+        line-height: 1.5rem;
+    }
+
+    .recipe_profile_container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: min(8rem, 8vh);
+        max-width: 700px;
+
+        .element_title {
+            font-weight: 500;
+        }
+
+
+        .next_section {
+            display: flex;
+            flex-direction: column;
+            gap: min(2rem, 2vh);
+
+            .page_header {
+                display: flex;
+                flex-direction: column;
+                gap: min(0.5rem, 0.5vh);
+                user-select: none;
+                color: #106B4A;
+                align-self: center;
+                text-align: center;
+
+            }
+
+            .bottom_container {
+                display: flex;
+                flex-direction: row;
+                gap: min(2rem, 2vw);
+
+                @media (max-width:600px) {
+                    flex-direction: column;
+                }
+
+                .right {
+                    display: flex;
+                    gap: min(2rem, 2vw);
+
+                    @media (max-width:600px) {
+                        gap: min(2rem, 2vh);
+                    }
+
+                    .madeby {
+                        display: flex;
+                        flex-direction: column;
+
+                    }
+
+
+
+                }
+
+                .left {
+                    display: flex;
+                    justify-content: flex-start;
+
+                    button {
+                        cursor: pointer;
+                        border: none;
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        padding: min(1rem, 1vh) min(1rem, 1vw);
+                        background: #ffeaea;
+                        color: #E70000;
+                        border: 2px solid #ffeaea;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+
+                        @media (max-width:600px) {
+                            padding: min(2rem, 2vh) min(2rem, 2vw);
+                        }
+
+                        &:first-child {
+                            border-radius: 5px 0 0 5px;
+                            background: #E70000;
+                            color: white;
+                            border: 2px solid #E70000;
+
+                        }
+
+                        &:last-child {
+                            border-radius: 0 5px 5px 0;
+                        }
+
+                    }
+                }
+
+
+
+            }
+
+
+            .img_wrapper {
+                width: auto;
+                height: auto;
+                overflow: hidden;
+                max-width: 700px;
+
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    aspect-ratio: 10/8;
+                    border-radius: 20px;
+                    max-height: 500px;
+                }
+            }
+
+            .details {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+
+
+                .details_inside {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+
+                    .element {
+                        display: flex;
+                        user-select: none;
+                        // border-left: 1px solid #E4E3E3;
+                        padding-inline: min(2rem, 2vh);
+                        gap: min(0.3rem, 0.3vw);
+
+                        // &:first-child {
+                        //     border: none;
+                        //     padding: 0;
+                        //     padding-right: min(2rem, 2vh);
+                        // }
+
+
+                        .review {
+                            align-self: center;
+                        }
+                    }
+
+
+                }
+            }
+
+        }
+
+        .notes {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            background: rgba(16, 107, 74, 0.1);
+            padding: min(1rem, 1vh);
+            min-width: 700px;
+
+            .notes_inside {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: min(3rem, 3vh);
+
+
+                .notes_elem {
+                    display: flex;
+                    flex-direction: column;
+                    border-left: none;
+                }
+            }
+
+        }
+
+        .introduction_section {
+            text-align: justify;
+            white-space: pre-line;
+
+        }
+    }
+
+    .ingredients_section {
+        display: flex;
+        flex-direction: column;
+        gap: min(2rem, 2vh);
+
+        ul {
+            list-style-type: none;
+
+            &:last-child {
+                margin: 0;
+            }
+
+            li {
+                margin-bottom: 10px;
+
+                &:before {
+                    content: "●";
+                    display: block;
+                    float: left;
+                    width: 1.2em;
+                    color: #ff0000;
+
+                }
+
+            }
+
+        }
+    }
+
+    .directions_section {
+        display: flex;
+        flex-direction: column;
+        gap: min(3rem, 3vh);
+
+        .direction {
+            display: flex;
+            flex-direction: column;
+            gap: min(1.5rem, 1.5vh);
+
+            .top {
+                max-width: 600px;
+                text-align: justify;
+            }
+
+            .name {
+                font-weight: 600;
+                color: #106B4A;
+
+            }
+
+            .img_wrapper {
+                width: auto;
+                height: auto;
+                overflow: hidden;
+                max-width: 600px;
+                max-height: 500px;
+
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    aspect-ratio: 10/6;
+                    border-radius: 20px;
+                }
+            }
+        }
+
+    }
+
+}

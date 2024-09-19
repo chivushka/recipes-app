@@ -1,0 +1,90 @@
+.formMultipleSelect {
+  display: inline-block;
+  gap: min(0.5rem, 0.5vh);
+  position: relative;
+
+  .multiple_select {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 10px;
+    padding-left: 9px;
+    border-radius: 10px;
+    border: 2px solid lightgray;
+    cursor: pointer;
+
+    .options_list {
+      position: absolute;
+      transform: translateY(+100%);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 999;
+      background: white;
+      border: 1px solid gray;
+
+      .option {
+        padding-inline: 5px;
+      }
+    }
+    .options_selected {
+      display: flex;
+      flex-wrap: wrap;
+      gap: min(1rem, 1vh);
+
+      .option_selected {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #106b4a;
+        background: white;
+        color: #106b4a;
+
+        .remove {
+          display: flex;
+          font-size: 18px;
+          cursor: pointer;
+          padding: 2px;
+
+          &:hover {
+            color: #e70000;
+          }
+
+          .icon {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .none_selected {
+        padding-top: 6px;
+        padding-bottom: 6px;
+      }
+    }
+  }
+
+  .active::before {
+    content: "+";
+    color: #106b4a;
+  }
+
+  .option {
+    &:hover {
+      color: white;
+      background: #1967d4;
+    }
+  }
+
+  input {
+    width: 1px;
+    border: none;
+    user-select: none;
+    color: white;
+    &:focus {
+      outline: none !important;
+    }
+  }
+
+}

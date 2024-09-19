@@ -1,0 +1,53 @@
+.banner_find_recipe_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+    padding: 0 min(8rem, 8vw);
+    justify-content: center;
+    align-items: center;
+    background-color: #FFE2E2;
+    gap: min(2rem, 2vh);
+    padding: min(4rem, 4vh) min(8rem, 8vw);
+
+
+    @media (max-width:600px) {
+        padding: min(4rem, 4vh) 10px;
+    }
+
+    text-align: center;
+
+    .attention_title {
+        color: #E70000;
+    }
+
+    .text {
+        font-size: 18px;
+        white-space: pre-line;
+        line-height: 1.4rem;
+
+        @media (max-width:600px) {
+            font-size: 16px;
+        }
+    }
+
+    .button_find {
+        padding: 10px 20px;
+        border: 2px solid #E70000;
+        border-radius: 20px;
+        background-color: #FFFFFF;
+        color: #E70000;
+        font-size: 18px;
+        cursor: pointer;
+
+        @media (max-width:600px) {
+            font-size: 16px;
+        }
+
+        &:hover {
+            background-color: #E70000;
+            color: #FFFFFF;
+        }
+    }
+}

@@ -1,0 +1,124 @@
+.login_page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 min(6rem, 6vh);
+    min-height: 80vh;
+
+    @media(max-width: 600px) {
+        flex-direction: column;
+        padding: min(6rem, 6vh) 10px;
+        min-height: 0vh;
+    }
+
+
+    .login_card {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 20px;
+        overflow: hidden;
+        min-height: 500px;
+
+        @media(max-width: 600px) {
+            flex-direction: column;
+        }
+
+        .header {
+            font-size: 24px;
+        }
+
+        button {
+            width: 50%;
+            padding: 10px;
+            border: 2px solid #106B4A;
+            border-radius: 20px;
+            background-color: #106B4A;
+            color: #FFFFFF;
+            font-size: 16px;
+            cursor: pointer;
+
+            @media (max-width:600px) {
+                width: 100%;
+            }
+
+            &:hover {
+
+                background-color: #FFFFFF;
+                color: #106B4A;
+            }
+        }
+
+        .left {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            background: url('https://images.pexels.com/photos/842545/pexels-photo-842545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center;
+            background-size: cover;
+
+            .content {
+                background-color: #ffffffa4;
+                padding: min(3rem, 3vh);
+                display: flex;
+                flex-direction: column;
+                gap: min(1rem, 1vh);
+                user-select: none;
+
+
+            }
+        }
+
+        .right {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: center;
+            padding: min(3rem, 3vh);
+            gap: min(3rem, 3vh);
+            background-color: #F3F3F3;
+
+            @media(max-width: 600px) {
+                // width: 100%;
+            }
+
+
+            form {
+                display: flex;
+                flex-direction: column;
+
+                gap: min(3rem, 3vh);
+
+                input {
+                    border: none;
+                    border-radius: 10px;
+                    border-bottom: 2px solid lightgray;
+                    padding: 20px 10px;
+
+                    &:focus {
+                        outline: none !important;
+                        border-bottom: 2px solid #106B4A;
+                    }
+                }
+
+                .show_error {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    color: #e70000;
+
+                    div {
+                        font-weight: 450;
+                    }
+
+                }
+
+            }
+        }
+    }
+
+
+
+
+}
